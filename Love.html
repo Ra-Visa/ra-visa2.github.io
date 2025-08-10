@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>I Love You So Much — សារស្នេហ៍</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Noto+Sans+Khmer:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#ff9a9e; /* warm gradient */
+      --bg2:#fad0c4;
+      --accent:#ffffff;
+      --heart:#ff6b81;
+      --glass: rgba(255,255,255,0.12);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Montserrat', 'Noto Sans Khmer', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(135deg,var(--bg1),var(--bg2));
+      display:flex;align-items:center;justify-content:center;
+      padding:24px;
+      -webkit-font-smoothing:antialiased;
+      color:var(--accent);
+    }
+
+    .card{
+      width:100%;max-width:920px;border-radius:20px;padding:36px;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);backdrop-filter: blur(6px);position:relative;overflow:hidden;
+    }
+
+    .top{
+      display:flex;gap:20px;align-items:center;
+    }
+    .heart{
+      width:120px;height:120px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+      background: radial-gradient(circle at 30% 30%, #fff8, transparent), linear-gradient(135deg,#ff4d6d,#ff8aa2);
+      transform:rotate(-10deg);
+      box-shadow: 0 8px 40px rgba(255,90,120,0.18), inset 0 -6px 18px rgba(0,0,0,0.06);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .heart svg{width:72px;height:72px;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.12));}
+
+    @keyframes float{
+      0%{transform:translateY(0) rotate(-10deg)}
+      50%{transform:translateY(-10px) rotate(-6deg)}
+      100%{transform:translateY(0) rotate(-10deg)}
+    }
+
+    .message h1{
+      margin:0;font-size:36px;line-height:1.05;font-weight:800;letter-spacing:-0.5px;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .message p{
+      margin:12px 0 0;font-size:20px;opacity:0.95;max-width:680px;
+      font-weight:600;
+    }
+
+    .typewriter{
+      display:inline-block;white-space:pre-wrap;margin-top:14px;font-weight:700;font-size:22px;color:#fff;
+      letter-spacing:0.2px;
+      border-right: 2px solid rgba(255,255,255,0.8);
+      padding-right:6px;animation: caret 1s steps(1) infinite;
+    }
+    @keyframes caret{50%{border-color:transparent}}
+
+    .controls{margin-top:22px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .btn{
+      background:transparent;border:1px solid rgba(255,255,255,0.18);padding:10px 16px;border-radius:12px;color:#fff;font-weight:700;cursor:pointer;
+      backdrop-filter: blur(4px);
+    }
+    .btn:active{transform:translateY(1px)}
+
+    .small{font-size:13px;opacity:0.9}
+
+    /* floating hearts */
+    .float-wrap{position:absolute;inset:0;pointer-events:none}
+    .float{position:absolute;opacity:0.9;filter:blur(0.2px);transform:translateY(0);animation: up 6s linear infinite}
+    .float svg{width:28px;height:28px}
+    @keyframes up{0%{transform:translateY(20vh) scale(0.8);opacity:0}10%{opacity:1}100%{transform:translateY(-120vh) scale(1.08);opacity:0}}
+
+    /* responsive */
+    @media (max-width:640px){
+      .top{flex-direction:column;align-items:flex-start}
+      .heart{width:92px;height:92px}
+      .heart svg{width:48px;height:48px}
+      .message h1{font-size:28px}
+      .message p{font-size:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="main">
+    <div class="top">
+      <div class="heart" aria-hidden="true">
+        <!-- simple heart SVG -->
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21s-7.5-4.8-9-7.2C1.5 11 3 7 6 6c1.8-.7 4 .6 6 3 2-2.4 4.2-3.7 6-3 3 1 4.5 5 3 7.8C19.5 16.2 12 21 12 21z" fill="#fff" opacity="0.14"/>
+          <path d="M12 20.2s-6.8-4.4-8.1-6.6C2.5 11.2 4 7.8 7 6.9c1.9-.6 4 .5 5 2.6 1-2.1 3.1-3.1 5-2.6 3 1 4.6 4.3 3.8 6.7-1.1 2.3-8.7 6.6-8.7 6.6z" fill="#fff" opacity="0.06"/>
+          <path d="M12.1 4.6c1.3-1.4 3.6-1.6 5.1-.3 1.9 1.6 2.1 4.5.6 6.6-1.8 2.4-6.2 5.4-6.2 5.4s-4.4-3-6.2-5.4c-1.5-2.1-1.3-5 .6-6.6 1.5-1.3 3.8-1.1 5.1.3.2.2.6.3.9.3.3 0 .7-.1.9-.3z" fill="#fff"/>
+        </svg>
+      </div>
+
+      <div class="message">
+        <h1>Create By Ra Visa</h1>
+        <p class="small"></p>
+
+        <div class="typewriter" id="typewriter" aria-live="polite"></div>
+
+        <div class="controls">
+          <button class="btn" id="replay">Replay animation</button>
+          <button class="btn" id="copy">Copy message</button>
+          <span class="small">Share this sweet note with someone you love 💌</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- floating hearts -->
+    <div class="float-wrap" aria-hidden="true">
+      <div class="float" style="left:6%;animation-delay:0s"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.8-9-7.2C1.5 11 3 7 6 6c1.8-.7 4 .6 6 3 2-2.4 4.2-3.7 6-3 3 1 4.5 5 3 7.8C19.5 16.2 12 21 12 21z"/></svg></div>
+      <div class="float" style="left:24%;animation-duration:7s;animation-delay:1s"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.8-9-7.2C1.5 11 3 7 6 6c1.8-.7 4 .6 6 3 2-2.4 4.2-3.7 6-3 3 1 4.5 5 3 7.8C19.5 16.2 12 21 12 21z"/></svg></div>
+      <div class="float" style="left:72%;animation-duration:6.4s;animation-delay:0.6s"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.8-9-7.2C1.5 11 3 7 6 6c1.8-.7 4 .6 6 3 2-2.4 4.2-3.7 6-3 3 1 4.5 5 3 7.8C19.5 16.2 12 21 12 21z"/></svg></div>
+      <div class="float" style="left:88%;animation-duration:8s;animation-delay:0.2s"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.8-9-7.2C1.5 11 3 7 6 6c1.8-.7 4 .6 6 3 2-2.4 4.2-3.7 6-3 3 1 4.5 5 3 7.8C19.5 16.2 12 21 12 21z"/></svg></div>
+    </div>
+  </div>
+
+  <script>
+    const text = `I Love You So Much 🥺🤍\nខ្ញុំសុំទោសរឿងគ្រប់យ៉ាងដែរខ្ញុំធ្វើដាក់អ្នក 🥺🤍`;
+    const el = document.getElementById('typewriter');
+
+    function typeIt(node, str, speed=45){
+      node.textContent = '';
+      let i=0;
+      function step(){
+        if(i<=str.length){
+          node.textContent = str.slice(0,i);
+          i++;
+          setTimeout(step,speed);
+        } else {
+          node.style.borderRight='0';
+        }
+      }
+      step();
+    }
+
+    // initial run
+    typeIt(el, text);
+
+    document.getElementById('replay').addEventListener('click', ()=>{
+      el.style.borderRight='2px solid rgba(255,255,255,0.8)';
+      typeIt(el, text);
+    });
+
+    document.getElementById('copy').addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText(text);
+        const btn = document.getElementById('copy');
+        btn.textContent='Copied!';
+        setTimeout(()=>btn.textContent='Copy message',1500);
+      }catch(e){
+        alert('Could not copy — try selecting the text manually.');
+      }
+    });
+  </script>
+</body>
+</html>
